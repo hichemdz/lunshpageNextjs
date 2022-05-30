@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useState, createRef } from "react";
-import {Process,portfolio} from './data';
+import {Process,portfolio,services} from './data';
 import {
   AppIcon,
   DesignIcon,
@@ -77,8 +77,11 @@ const InnerContext = ({ children, val }) => {
   }, [dataRef]);
 
   const values = {
+    // data
     Process,
     portfolio,
+    services,
+    // menu
     isOpenMbielMenu,
     setOpenMbielMenu,
     oferData,

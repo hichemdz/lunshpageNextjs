@@ -86,7 +86,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <Section myRef={5}>
+    <Section myRef={5} className='pb-8'>
       <div className="flex items-center py-8">
         <div className="space-y-8">
           <h3 class="capitalize font-fira leading-main text-xl lg:text-4xl max-w-2xl">

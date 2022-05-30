@@ -1,3 +1,9 @@
+import {
+  AppIcon,
+  DesignIcon,
+  MarketingIcon,
+  BusinessIcon
+} from "./Icons";
 export const Process = {
   title: "Our Process",
   description:
@@ -98,3 +104,73 @@ export const portfolio = {
     },
   ],
 };
+
+export const services = [
+  {
+    label: "Website Design",
+    icon: DesignIcon,
+    title: "Whatever your websites need we can help",
+    description:
+      "Websites are everywhere, with the world online having a good website that stands out can be a challenge. With every shifting requirement they continually evolve, ensuring you always have that perfect website we are here to help. Whether it be designs and graphics, adding new features, e-commerce store, dropshipping, custom implementations or anything you can think of our team of experts will be able to help. Don’t hesitate to contact us with any questions!",
+    features: {
+      title: "Bullet Points",
+      items: [
+        "Pre-designed Templates",
+        "Efficient, Reliable and Economical",
+        "Custom Tailored Design",
+        "Unique and Creative Design",
+      ],
+    },
+    img: "/assest/services/s1.jpg",
+  },
+  {
+    label: "Applications",
+    icon: AppIcon,
+    title: "Applications can be diverse",
+    description:
+      "Applications might sound scary. Hearing about Android, IOS, Windows, & even web applications, there are so many devices and languages to choose from. But, applications provide substantial flexibility and versatility that will help your company offer new innovative and convenient service to win over new clients That’s where Nu Terra Labs comes in to help you ensure you have team to ensure fulfil, you’re requirements and ace the delivery.  Whether you’re starting from scratch or already have an application, we can help you with any problems and you take your project to the next level.",
+      img: "/assest/services/s2.jpg",
+      features: {
+      title: "Bullet Points",
+      items: [
+        "Implement complex functions and features in a fast and efficient manner",
+      ],
+    },
+  },
+  {
+    label: "Online Marketing",
+    icon: MarketingIcon,
+    title: "Getting Value.",
+    description:
+      "Online Marketing/Digital marketing is a variety of methods to boosting your Online performance. Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. We also offer a social media marketing package that will boost your online presence. Ask us how?",
+      img: "/assest/services/s3.jpg",
+      features: {
+      title: "Bullet Points",
+      items: [
+        "SEO Audit",
+        "Effective Content Writing",
+        "Anchor text & keywords placement",
+        "Search Engine Marketing",
+        "Effective Design across platforms",
+      ],
+    },
+  },
+  {
+    label: "Business Solutions",
+    icon: BusinessIcon,
+    title: "Nu Terra Labs is able to offer you",
+    description:
+      "Online Marketing/Digital marketing is a variety of methods to boosting your Online performance. Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. We also offer a social media marketing package that will boost your online presence. Ask us how?",
+      img: "/assest/services/s4.jpg",
+      features: {
+      title: "Bullet Points",
+      items: [
+        "SEO Audit",
+        "Effective Content Writing",
+        "Anchor text & keywords placement",
+        "Search Engine Marketing",
+        "Effective Design across platforms",
+      ],
+    },
+  },
+];

@@ -21,16 +21,24 @@ const Item = ({ label, Icon, index, slideIndex, handelNav }) => (
   </li>
 );
 
-const SliderService = ({ title, description, img, calback }) => {
+const SliderService = ({ title, description, img, features ,calback }) => {
   return (
     <div className=" py-3 items-center  lg:flex flex-row-reverse ">
       <div className="w-full flex justify-center ">
-        <div className=" text-center lg:text-left max-w-xl space-y-8">
+        <div className=" text-center lg:text-left max-w-xl space-y-5">
           <h3 className="text-3xl ">{title}</h3>
-          <p>{description}</p>
-          <button className="font-bold text-lg" onClick={calback}>
+          <p className="text-black leading-relaxed text-opacity-90 text-sm ">{description}</p>
+          {/* <button className="font-bold text-lg" onClick={calback}>
             Give Super Powers to the User
-          </button>
+          </button> */}
+          <div className="space-y-2">
+            <h3 className="font-bold text-lg">{features.title}</h3>
+            <ul className=" space-y-2 text-black text-opacity-75 text-sm list-disc pl-3">
+              {
+                features.items.map((v,i)=>(<li key={i}>{v}</li>))
+              }
+            </ul>
+          </div>
         </div>
       </div>
       <div className="mt-3 w-full flex justify-center items-center">
@@ -40,7 +48,7 @@ const SliderService = ({ title, description, img, calback }) => {
   );
 };
 const Service = () => {
-  const {dataService} = useContext(ContextData)
+  const {dataService,services} = useContext(ContextData)
   const slide = useRef(null);
   const [slideIndex, setslideIndex] = useState(0);
 
@@ -62,7 +70,7 @@ const Service = () => {
   return (
     <Section className="py-8" myRef={1}>
       <ul className=" mb-8 w-full grid grid-cols-2 lg:grid-cols-4 gap-y-8 items-center ">
-        {dataService.map((i, key) => (
+        {services.map((i, key) => (
           <Item
             Icon={i.icon}
             handelNav={() => handelNav(key)}
@@ -73,17 +81,18 @@ const Service = () => {
           />
         ))}
       </ul>
+      
       <Slider ref={slide} {...settings}>
 
         {
-          [...Array(15)].map( (v,i) =>(
+          services.map( (v,i) =>(
             
             <SliderService
               key={i}
-              title="Lorem Ipsum is simply dummy text"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum"
-              img={'/assest/img/s1.jpg'}
+              title={v.title}
+              description={v.description}
+              features={v.features}
+              img={v.img}
             />
           ))
         }
