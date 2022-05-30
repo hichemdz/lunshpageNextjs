@@ -2,10 +2,11 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./Components/**/*.{js,ts,jsx,tsx}",
+    "./*.js"
   ],
   theme: {
     fontFamily: {
-      fira: ["Fira Sans"],
+      fira: ['Fira Sans', 'sans-serif'],
     },
     extend: {
       maxWidth: {

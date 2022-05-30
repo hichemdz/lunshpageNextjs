@@ -44,7 +44,7 @@ const ItmeTestimonial = ({ img, name, title, range, comment }) => {
 };
 const Testimonial = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     centerMode: true,
     centerPadding: "60px",

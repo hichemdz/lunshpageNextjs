@@ -97,7 +97,8 @@ const InnerContext = ({ children, val }) => {
   };
   return (
     <ContextData.Provider value={values}>
-      <div className="relative space-y-24">{children}</div>
+      <div className="relative 
+       space-y-24">{children}</div>
     </ContextData.Provider>
   );
 };
