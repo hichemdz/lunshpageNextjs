@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useState, createRef } from "react";
-import {Process,portfolio,services} from './data';
+import { Process, portfolio, services } from "./data";
 import {
   AppIcon,
   DesignIcon,
@@ -30,7 +30,11 @@ const InnerContext = ({ children, val }) => {
     { label: "Business Solutions", icon: BusinessIcon },
   ];
   const dataContact = [
-    { title: "Our Mail address", label: "info@nuterralabs.com", icon: MailIcon },
+    {
+      title: "Our Mail address",
+      label: "info@nuterralabs.com",
+      icon: MailIcon,
+    },
     { title: "Our location", label: "Edmonton, Montreal", icon: AddressIcon },
     { title: "Ofition timing", label: "24hrs 7 days a week", icon: TimeIcon },
     { title: "Call Us for help!", label: "587-984-2923", icon: PhoneIcon },
@@ -68,7 +72,7 @@ const InnerContext = ({ children, val }) => {
           let endSection = offset + dataRef[i].current.clientHeight;
           let windowOP = window.pageYOffset;
 
-          if (windowOP >= offset  && windowOP <= endSection - 60) {
+          if (windowOP >= offset && windowOP <= endSection - 60) {
             setActiveItem(i);
           }
         }
@@ -97,8 +101,12 @@ const InnerContext = ({ children, val }) => {
   };
   return (
     <ContextData.Provider value={values}>
-      <div className="relative 
-       space-y-24">{children}</div>
+      <div
+        className="relative 
+          space-y-24"
+      >
+        {children}
+      </div>
     </ContextData.Provider>
   );
 };
