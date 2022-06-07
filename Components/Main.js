@@ -1,6 +1,6 @@
-import React from "react";
-
+import React,{useContext} from "react";
 import { Section } from ".";
+import { ContextData } from "../Context";
 const InputMainContact = ({ label, placeholder, type = "text", textarea }) => (
   <div className="space-y-2">
     <label className="text-white text-sm">{label}</label>
@@ -47,6 +47,9 @@ const MainContact = ({ title }) => {
 };
 
 const Main = () => {
+
+  const {dataRef } =
+  useContext(ContextData);
   const styleCircle = () => ({
     position: "absolute",
     width: "103.58px",
@@ -56,6 +59,15 @@ const Main = () => {
     background:
       "linear-gradient(49.31deg, #1A86B5 38.58%, #001438 83.87%), linear-gradient(159.32deg, #C4C4C4 -133.43%, rgba(189, 189, 189, 0) 86.3%), linear-gradient(159.32deg, #C4C4C4 -133.43%, rgba(189, 189, 189, 0) 86.3%)",
   });
+const handleLink = (e) => {
+  e.preventDefault();
+    let top = dataRef[4].current.offsetTop - 60;
+    window.scroll({
+      top   ,
+      behavior: "smooth",
+    });
+  
+};
   return (
     <Section
       myRef={0}
@@ -67,10 +79,8 @@ const Main = () => {
           <div className="flex w-full items-center justify-between  h-screen">
             <div className="w-full relative">
               <div className="text-white text-center md:text-left w-full space-y-7 lg:max-w-xl">
-                <h2 className="uppercase  ">
-                  Lorem Ipsum is simply dummy text{" "}
-                </h2>
-                <h1 className="capitalize font-fira leading-main text-2xl lg:text-4xl">
+               
+                <h1 className="capitalize font-fira leading-main text-2xl lg:text-5xl">
                   Nu Terra Labs{" "}
                 </h1>
                 <p>
@@ -80,8 +90,8 @@ const Main = () => {
                   come to life.{" "}
                 </p>
                 <div>
-                  <a className="text-regal-blue" href="#">
-                    my request
+                  <a className="text-regal-blue" href="#" onClick={handleLink}>
+                  Contact Now! 
                   </a>
                   <span className="block w-16  py-1/8 mt-2 bg-regal-blue "></span>
                 </div>

@@ -23,7 +23,7 @@ const Price = () => {
             budget is our first concern. Never pay for endless and pricey
             monthly subscription fees for a website that you own, it's a scam.
             With us, you'll get what you pay, No Monthly Subscription Fees for
-            your contents, We work with your budget. "Price is what you pay.
+            your contents, We work with your budget.<br/> "Price is what you pay.
             Value is what you get." -Warren Buffet
           </p>
         </div>

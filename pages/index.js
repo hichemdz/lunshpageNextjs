@@ -27,8 +27,8 @@ export default function Home() {
       <Process />
       <Protfolio />
       <Conatct />
-      <Testimonial />
-      <div className="bg-gray-900">
+      {/* <Testimonial /> */}
+      <div className="">
         <Price />
         <Footer />
       </div>

@@ -1,9 +1,4 @@
-import {
-  AppIcon,
-  DesignIcon,
-  MarketingIcon,
-  BusinessIcon
-} from "./Icons";
+import { AppIcon, DesignIcon, MarketingIcon, BusinessIcon } from "./Icons";
 export const Process = {
   title: "Our Process",
   description:
@@ -51,7 +46,7 @@ export const Process = {
       title: "Keep in touch",
       description:
         "We'll be here, one phone call or text away in case you need to edit or upgrade your website. We also offer optional yearly website maintenance and improved service.",
-      img: "/assest/proccess/launch.jpg", // 443 x 344
+      img: "/assest/proccess/keepTouch.jpg", // 443 x 344
     },
   ],
 };
@@ -129,8 +124,8 @@ export const services = [
     title: "Applications can be diverse",
     description:
       "Applications might sound scary. Hearing about Android, IOS, Windows, & even web applications, there are so many devices and languages to choose from. But, applications provide substantial flexibility and versatility that will help your company offer new innovative and convenient service to win over new clients That’s where Nu Terra Labs comes in to help you ensure you have team to ensure fulfil, you’re requirements and ace the delivery.  Whether you’re starting from scratch or already have an application, we can help you with any problems and you take your project to the next level.",
-      img: "/assest/services/s2.jpg",
-      features: {
+    img: "/assest/services/s2.jpg",
+    features: {
       title: "Bullet Points",
       items: [
         "Implement complex functions and features in a fast and efficient manner",
@@ -143,8 +138,8 @@ export const services = [
     title: "Getting Value.",
     description:
       "Online Marketing/Digital marketing is a variety of methods to boosting your Online performance. Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. We also offer a social media marketing package that will boost your online presence. Ask us how?",
-      img: "/assest/services/s3.jpg",
-      features: {
+    img: "/assest/services/s3.jpg",
+    features: {
       title: "Bullet Points",
       items: [
         "SEO Audit",
@@ -160,16 +155,22 @@ export const services = [
     icon: BusinessIcon,
     title: "Nu Terra Labs is able to offer you",
     description:
-      "Online Marketing/Digital marketing is a variety of methods to boosting your Online performance. Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. We also offer a social media marketing package that will boost your online presence. Ask us how?",
-      img: "/assest/services/s4.jpg",
-      features: {
+      "Every business, industry, and client is unique and sometimes a bit more support is needed. Nu Terra Labs has a supported and partnered with clients in various industries to bring you the tools and knowledge to get to the next level. With dedicated members and partners on our business solutions team, Nu Terra Labs can provide add in services for all your needs including:Every business, industry, and client is unique and sometimes a bit more support is needed. Nu Terra Labs has a supported and partnered with clients in various industries to bring you the tools and knowledge to get to the next level. With dedicated members and partners on our business solutions team, Nu Terra Labs can provide add in services for all your needs including:",
+    img: "/assest/services/s4.jpg",
+    features: {
       title: "Bullet Points",
       items: [
-        "SEO Audit",
-        "Effective Content Writing",
-        "Anchor text & keywords placement",
-        "Search Engine Marketing",
-        "Effective Design across platforms",
+        "Marketing Strategy and Planning",
+        "Social Media Management",
+        "Ad Management",
+        "Content Création",
+        "Process Analysis and Development",
+        "Strategy Planning and Advice",
+        "Change Management",
+        "Bookkeeping",
+        "Human Resource Recruitment",
+        "Software solutions",
+        "Cost savings and analysis"
       ],
     },
   },
