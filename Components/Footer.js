@@ -120,8 +120,7 @@ const Footer = () => {
       <div className=" grid grid-cols-12 lg:grid-cols-12 items-start gap-7 py-8">
         <div className="col-span-12 md:col-span-8 lg:col-span-4 text-white">
           <Description
-            text="Ordered my first mobile app development to ITSoft Solutions. I was
-            inexperienced contractor ."
+            text="Edmonton Based IT solutions company ready to help bring your business to the next level. Contact us now via email or phone."
             mediaData={data}
           />
         </div>
