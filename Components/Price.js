@@ -13,7 +13,7 @@ const Item = ({ Icon, name }) => {
 };
 const Price = () => {
   return (
-    <Section myRef={6} className="bg-main-balck text-white fill-grean-950  py-32 ">
+    <Section myRef={6} className="text-black fill-grean-950  py-32 ">
       <div className="flex space-y-8 lg:space-y-0 flex-col lg:flex-row lg:items-center justify-between ">
         <div className="max-w-xl space-y-6">
           <h3 className="text-2xl capitalize">Our pricing plan</h3>
@@ -23,7 +23,7 @@ const Price = () => {
             budget is our first concern. Never pay for endless and pricey
             monthly subscription fees for a website that you own, it's a scam.
             With us, you'll get what you pay, No Monthly Subscription Fees for
-            your contents, We work with your budget. "Price is what you pay.
+            your contents, We work with your budget.<br/> "Price is what you pay.
             Value is what you get." -Warren Buffet
           </p>
         </div>

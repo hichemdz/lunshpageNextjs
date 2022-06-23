@@ -57,9 +57,16 @@ const Menu = ({ className, footer = false }) => {
         className ? className : "hidden md:flex items-center space-x-12"
       }
     >
-      {items.map((val, key) => {
+      {/* {items.map((val, key) => {
         return <NavItem name={val} key={key} index={key} footer={footer} />;
-      })}
+      })} */}
+      <NavItem name={items[0]}  index={0} footer={footer} />;
+      <NavItem name={items[1]}  index={1} footer={footer} />;
+      <NavItem name={items[2]}  index={2} footer={footer} />;
+      <NavItem name={items[3]}  index={3} footer={footer} />;
+      <NavItem name={items[4]}  index={4} footer={footer} />;
+      {/* <NavItem name={items[5]}  index={5} footer={footer} />; */}
+      <NavItem name={items[6]}  index={6} footer={footer} />;
     </ul>
   );
 };

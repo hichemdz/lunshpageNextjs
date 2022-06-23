@@ -32,7 +32,7 @@ const SliderService = ({ title, description, img, features ,calback }) => {
             Give Super Powers to the User
           </button> */}
           <div className="space-y-2">
-            <h3 className="font-bold text-lg">{features.title}</h3>
+           
             <ul className=" space-y-2 text-black text-opacity-75 text-sm list-disc pl-3">
               {
                 features.items.map((v,i)=>(<li key={i}>{v}</li>))

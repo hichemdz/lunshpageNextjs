@@ -5,6 +5,7 @@ import Slider from "react-slick";
 
 import Section from "./Section";
 import { ContextData } from "../Context";
+import { CloseIcon } from "../Icons";
 
 const ItemSlide = ({ img, type, title, handelCLick }) => (
   <div className="space-y-2  ml-3" onClick={handelCLick}>
@@ -18,7 +19,7 @@ const ItemSlide = ({ img, type, title, handelCLick }) => (
 
 const ItemSlideD = ({ img }) => (
   <div className="space-y-2  ml-3">
-    <Image width={294} height={238}  className="w-full" src={img} />
+    <Image width={494} height={438}   className="w-full" src={img} />
   </div>
 );
 const Details = ({ settings2, setShowDetails, showDetails,indexWork,data }) => (
@@ -32,16 +33,17 @@ const Details = ({ settings2, setShowDetails, showDetails,indexWork,data }) => (
       onClick={() => setShowDetails(0)}
       className="text-white absolute top-0 right-0 z-50 lg:right-11 text-2xl opacity-75 hover:opacity-100 w-16 h-16"
     >
-      x 
+      <CloseIcon className='text-white w-6 h-6' />
     </button>
     <div className="container bg-gray-900 relative flex flex-row items-center overflow-y-auto py-16 h-screen">
       <div className="w-full flex flex-col lg:flex-row space-y-8 items-center md:space-x-12">
         <div className="w-full  lg:max-w-lg">
           <Slider {...settings2}>
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
+            
+              
+            
+            <ItemSlideD img={data[indexWork].img} />
+          
           </Slider>
         </div>
         <div className="w-full  lg:max-w-xl  text-white space-y-8">
@@ -57,8 +59,9 @@ const Details = ({ settings2, setShowDetails, showDetails,indexWork,data }) => (
   </div>
 );
 const Protfolio = () => {
-  const { portfolio } = useContext(ContextData);
+  const { portfolio,services } = useContext(ContextData);
   const { title, description, items } = portfolio;
+  
   const [showDetails, setShowDetails] = useState(false);
   const [indexWork, setSIndexWork] = useState(0);
   const settings = {
@@ -119,7 +122,7 @@ const Protfolio = () => {
   return (
     <Section myRef={3} className="min-h-screen flex items-center w-full">
       <Details
-        data={items}
+        data={services}
         indexWork={indexWork}
         showDetails={showDetails}
         setShowDetails={setShowDetails}
@@ -137,12 +140,12 @@ const Protfolio = () => {
           </div>
           <div className="max-w-2xl w-full">
             <Slider {...settings}>
-              {items.map((v, i) => (
+              {services.map((v, i) => (
                 <ItemSlide
                   key={i}
-                  img={'/assest/img/w1.jpg'}
-                  title="Lorem Ipsum is simply dummy text of the printing "
-                  type={v.serviceName}
+                  img={v.img}
+                  title={v.title}
+                  type={v.label}
                   handelCLick={()=>handelCLick(i)}
                 />
               ))}
