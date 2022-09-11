@@ -14,6 +14,9 @@ import {
 export const ContextData = createContext();
 
 const InnerContext = ({ children, val }) => {
+
+  const slide = createRef(null); // change slide service
+  const [slideIndex, setslideIndex] = useState(0); // change header slide service
   const items = [
     "home",
     "services",
@@ -96,6 +99,8 @@ const InnerContext = ({ children, val }) => {
     items,
     dataRef,
     removeSpace,
+    slide,
+    slideIndex, setslideIndex,
     ...val,
   };
   return (

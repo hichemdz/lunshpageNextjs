@@ -66,41 +66,41 @@ export const portfolio = {
     {
       serviceName: "Web Design",
       title: "",
-      thumbnails: "",
+      thumbnails: "/assest/project/d.jpg",
       description:
-        "We acknowledge the importance of giving as many options to you in the design process to meet your needs and budget. You get to choose whether you want to use a cheaper and more economical approach with an elegant pre-designed template or use a unique and fully customizable tailored design with no creative constraints",
-      images: ["src", "src"],
+        "We acknowledge the importance of giving as many options to you in the design process to meet your needs and budget. You get to choose whether you want to use a cheaper and more economical approach with an elegant pre-designed template or use a unique & fully customizable tailored design with no creative constraints.One of our strengths is our high standards and appreciation of intelligent designs. Therefore, all our models will consider the following elements to ensure a positive and unforgettable user experience.",
+      images: ["/assest/project/d.jpg"],
     },
     {
       serviceName: "Applications",
       title: "",
-      thumbnails: "",
+      thumbnails: "/assest/project/a.jpg",
       description:
         "Achieve your project's potential with smart and reliable solutions. Implement complex functions and features in a fast and efficient manner.<br/>Applications provide substantial flexibility and versatility that will help your company offer new innovative and convenient service to win over new clients.",
-      images: ["src", "src"],
+      images: ["/assest/project/a.jpg"],
     },
     {
-      serviceName: "Content Writing",
+      serviceName: "Cloud Solutions",
       title: "",
-      thumbnails: "",
+      thumbnails: "/assest/project/c.jpg",
       description:
-        "Good content writing is one of the main elements for pleasant and informative user experience. We follow a thorough process when it comes to Content Writing.<br/>Providing the information your audience is looking for while grasping their attention for more extended periods is an art form that requires a strategic approach.<br/>It's vitally important to consider the proper material to your target audience and keyword research is crucial to determine the scope, and the goal of every single page on your website.<br/>We will make sure the information on every page quickly scanned while remaining relevant and accurate. Placing calls-To-Action buttons (CTAs) strategically with creative and attractive texts boosts conversion rates and making the user stay longer. This way, it will be much easier for the user to find the relevant information they're looking for.",
-      images: ["src", "src"],
+        "Our team is ready to help you build and deploy your solutions on today’s platforms. With experience building solutions leveraging cloud platforms with scalability in mind, allow us to help you grow. Whether its IoT, support, or development, the Nu Terra team is ready.",
+      images: ['/assest/project/c.jpg'],
     },
     {
       serviceName: "Online Marketing",
       title: "",
-      thumbnails: "",
+      thumbnails: "/assest/project/m.jpg",
       description:
-        "Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. <br/>We also offer a social media marketing package that will boost your online presence.<br/>Ask us how?<br/>SEO Audit<br/>Effective Content Writing<br/>Anchor text & keywords placement<br/>Search Engine Marketing<br/>Effective Design across platforms",
-      images: ["src", "src"],
+        "Online/Digital marketing, a variety of methods to boosting your Online performance. Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. We also offer a social media marketing package that will boost your online presence. Ask us how? SEO Audit Effective Content Writing Anchor text & keywords placement Search Engine Marketing Effective Design across platforms",
+       images: ["/assest/project/m.jpg"],
     },
     {
       serviceName: "Robotics/Hardware",
       title: "",
-      thumbnails: "",
-      description: "",
-      images: ["src", "src"],
+      thumbnails: "/assest/project/r.jpg",
+      description: "Our SME’s will work with you to analyze your problems and come up with potential software and hardware solutions. With a wide variety of experience in Embedded Systems, Robotics Systems and Control Systems Nu Terra Labs’ will advise on the design of technology and architecture, as well as include roadmaps for scalability and security, a rough estimate of time and costs, and more.",
+      images: ["/assest/project/r.jpg"],
     },
   ],
 };
@@ -109,9 +109,9 @@ export const services = [
   {
     label: "Website Design",
     icon: DesignIcon,
-    title: "Whatever your websites need we can help",
+    title: "Whatever your websites need we can help!",
     description:
-      "Websites are everywhere, with the world online having a good website that stands out can be a challenge. With every shifting requirement they continually evolve, ensuring you always have that perfect website we are here to help. Whether it be designs and graphics, adding new features, e-commerce store, dropshipping, custom implementations or anything you can think of our team of experts will be able to help. Don’t hesitate to contact us with any questions!",
+      "Websites are everywhere, with the world online having a good website that stands out can be a challenge. With every shifting requirement they continually evolve, ensuring you always have that perfect website we are here to help. We acknowledge the importance of giving as many options to you in the design process to meet your needs and budget. You get to choose whether you want to use a cheaper and more economical approach with an elegant pre-designed template or use a unique & fully customizable tailored design with no creative constraints. Whether it be designs and graphics, adding new features, e-commerce store, drop shipping, custom implementations or anything else web related you can think of, our team of experts will be able to help.",
     features: {
       title: "Bullet Points",
       items: [
@@ -160,16 +160,12 @@ export const services = [
     icon: BusinessIcon,
     title: "Nu Terra Labs is able to offer you",
     description:
-      "Online Marketing/Digital marketing is a variety of methods to boosting your Online performance. Our online marketing package will help improve your organic search results and increase traffic to your website. We use proven and reliable SEO and keyword placement techniques and audit tools. We also offer a social media marketing package that will boost your online presence. Ask us how?",
+      "Have a business idea or project but not sure how to get it done? We will help you through the entire product development cycle, from initial requirements analysis to the implementation and adoption. Our team has profound understanding of service-oriented architectures, complex enterprise application and UI/UX design that enables them to develop high-performing web solutions.Our SME’s will work with you to analyze your problems and come up with potential software solutions. Nu Terra Labs’ will advise on the design of technology and architecture, as well as include roadmaps for scalability and security, a rough estimate of time and costs, and more.",
       img: "/assest/services/s4.jpg",
       features: {
       title: "Bullet Points",
       items: [
-        "SEO Audit",
-        "Effective Content Writing",
-        "Anchor text & keywords placement",
-        "Search Engine Marketing",
-        "Effective Design across platforms",
+        
       ],
     },
   },

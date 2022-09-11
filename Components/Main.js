@@ -99,7 +99,7 @@ const Main = () => {
                 </p>
                 <div>
                   <a className="text-regal-blue" href="#" onClick={handleLink} >
-                    Contact us Now
+                     Contact Now
                   </a>
                   <span className="block w-16  py-1/8 mt-2 bg-regal-blue "></span>
                 </div>

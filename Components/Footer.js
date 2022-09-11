@@ -5,20 +5,20 @@ import Section from "./Section";
 import { InlIcon, InsIcon, FbIcon, TopIcon } from "../Icons";
 import Menu from "./Menu";
 
-const Item = ({ Icon, link, label }) => {
+const Item = ({ Icon, link, label,onClick }) => {
   if (link) {
     return (
-      <a className="flex items-center space-x-1" href={link}>
+      <a className="flex items-center space-x-1" href={link} onClick={onClick}>
         {Icon && <Icon className="w-6 h-6 " />}
         {label && <p>{label}</p>}
       </a>
     );
   }
   return (
-    <div className="flex items-center space-x-4">
+    <button className="flex items-center space-x-4">
       {Icon && <Icon className=" text-white w-6 h-6" />}
       {label && <p>{label}</p>}
-    </div>
+    </button>
   );
 };
 
@@ -55,13 +55,60 @@ const MenuOfferFooter = ({ data }) => {
   );
 };
 
-const MenuFooter = ({ data,className='' }) => {
+const MenuFooterService = ({ data,className=''}) => {
+  
   return (
     <ul className={`text-sm  text-white ${className !=='' ? className : 'space-y-7'}`}>
       {data.map((v, i) => {
         return (
           <li key={i}>
-            <Item label={v.label} Icon={v.icon} />
+            <ItemService  index={i} label={v.label} Icon={v.icon}/>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+
+const ItemService = ({ Icon, link='#', label ,index }) => {
+  const {slide,slideIndex, setslideIndex,activeItme, setOpenMbielMenu, dataRef} = useContext(ContextData)
+  const handelNav = () => {
+    slide.current.slickGoTo(index);
+    setslideIndex(index);
+  
+  };
+
+  const handleLink = (e) => {
+    e.preventDefault();
+    handelNav()
+    let index = 1;
+    if (activeItme !== index && dataRef[index]) {
+      let top = dataRef[index].current.offsetTop - 60;
+      window.scroll({
+        top: top <0?0:top   ,
+        behavior: "smooth",
+      });
+      setOpenMbielMenu(false)
+    }
+  };
+  
+    return (
+      <button className={`flex items-center space-x-4 ${index === slideIndex?'text-blue-400':''}`} onClick={handleLink}>
+      {Icon && <Icon className=" text-white w-6 h-6" />}
+      {label && <p>{label}</p>}
+    </button>
+    );
+
+}
+const MenuFooterContact = ({ data,className=''}) => {
+  
+  return (
+    <ul className={`text-sm  text-white ${className !=='' ? className : 'space-y-7'}`}>
+      {data.map((v, i) => {
+        return (
+          <li key={i}>
+            <Item label={v.label} Icon={v.icon} link=''/>
           </li>
         );
       })}
@@ -95,8 +142,10 @@ const EndFooter = () => {
 };
 
 const Footer = () => {
-  const { dataService, dataContact, oferData } = useContext(ContextData);
+  const { dataService, dataContact } = useContext(ContextData);
 
+
+    
   const data = [
     {
       icon: FbIcon,
@@ -132,11 +181,11 @@ const Footer = () => {
         </div>
         <div className="col-span-6 md:col-span-4 lg:col-span-2 space-y-5">
           <h6 className="text-white font-semibold capitalize">Services</h6>
-          <MenuFooter data={dataService} />
+          <MenuFooterService data={dataService}  />
         </div>
         <div className="col-span-6  md:col-span-12 space-y-5">
           <h6 className="text-white font-semibold capitalize">Conatct Us</h6>
-          <MenuFooter data={dataContact}  className='md:flex     md:items-center space-y-7 md:space-y-0 md:space-x-8 '/>
+          <MenuFooterContact data={dataContact}  className='md:flex     md:items-center space-y-7 md:space-y-0 md:space-x-8 '/>
         </div>
         
       </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 
@@ -18,7 +18,7 @@ const ItemSlide = ({ img, type, title, handelCLick }) => (
 
 const ItemSlideD = ({ img }) => (
   <div className="space-y-2  ml-3">
-    <Image width={294} height={238}  className="w-full" src={img} />
+    <img width={294} height={238}  className="w-full" src={img} />
   </div>
 );
 const Details = ({ settings2, setShowDetails, showDetails,indexWork,data }) => (
@@ -38,10 +38,11 @@ const Details = ({ settings2, setShowDetails, showDetails,indexWork,data }) => (
       <div className="w-full flex flex-col lg:flex-row space-y-8 items-center md:space-x-12">
         <div className="w-full  lg:max-w-lg">
           <Slider {...settings2}>
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
-            <ItemSlideD img={'/assest/img/pd1.jpg'} />
+            {
+              data[indexWork].images.map((v,i)=> <ItemSlideD key={i} img={v} />)
+            }
+           
+           
           </Slider>
         </div>
         <div className="w-full  lg:max-w-xl  text-white space-y-8">
@@ -56,11 +57,21 @@ const Details = ({ settings2, setShowDetails, showDetails,indexWork,data }) => (
     </div>
   </div>
 );
+
+const Arrow = (handelCLick) =>  <button >ok</button>
 const Protfolio = () => {
   const { portfolio } = useContext(ContextData);
   const { title, description, items } = portfolio;
   const [showDetails, setShowDetails] = useState(false);
   const [indexWork, setSIndexWork] = useState(0);
+  const refSliser = useRef(null)
+  const next = () =>  {
+   // console.log(refSliser);
+   refSliser.slickNext();
+  }
+ const previous = () => {
+  //refSliser.slickPrev();
+  }
   const settings = {
     dots: false,
     centerMode: true,
@@ -99,6 +110,7 @@ const Protfolio = () => {
       },
     ],
   };
+
   const settings2 = {
     dots: false,
     centerMode: true,
@@ -125,11 +137,13 @@ const Protfolio = () => {
         setShowDetails={setShowDetails}
         settings2={settings2}
       />
+
       <div className="space-y-8">
         <div className="lg:flex  items-center space-y-8 lg:space-x-4 lg:space-y-0">
           <div className="w-full space-y-6">
             <h3 className=" mx-auto  text-center lg:text-left lg:mx-0 max-w-md capitalize text-2xl leading-relaxed">
-              {title}
+              {title} 
+              
             </h3>
             <p className="mx-auto   text-center lg:text-left capitalize leading-relaxed text-sm max-w-lg text-black text-opacity-80">
               {description}
@@ -143,17 +157,21 @@ const Protfolio = () => {
 
           </div>
           <div className="max-w-2xl w-full">
-            <Slider {...settings}>
-              {items.map((v, i) => (
+            <Slider ref={refSliser} {...settings}>
+              {items.map((v, i) => {
+              
+               return (
                 <ItemSlide
                   key={i}
-                  img={'/assest/img/w1.jpg'}
-                  title="Lorem Ipsum is simply dummy text of the printing "
+                  img={v.thumbnails || '/assest/project/c.jpg'}
+                  title={v.title}
                   type={v.serviceName}
                   handelCLick={()=>handelCLick(i)}
                 />
-              ))}
+              )
+              })}
             </Slider>
+            
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">

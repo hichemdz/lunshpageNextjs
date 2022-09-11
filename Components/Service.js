@@ -48,9 +48,9 @@ const SliderService = ({ title, description, img, features ,calback }) => {
   );
 };
 const Service = () => {
-  const {dataService,services} = useContext(ContextData)
-  const slide = useRef(null);
-  const [slideIndex, setslideIndex] = useState(0);
+  const {dataService,services,slide,slideIndex, setslideIndex} = useContext(ContextData)
+  
+ 
 
   const settings = () => ({
     dots: false,
