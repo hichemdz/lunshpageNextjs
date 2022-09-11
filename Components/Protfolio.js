@@ -131,9 +131,16 @@ const Protfolio = () => {
             <h3 className=" mx-auto  text-center lg:text-left lg:mx-0 max-w-md capitalize text-2xl leading-relaxed">
               {title}
             </h3>
-            <p className="mx-auto  text-center lg:text-left capitalize leading-relaxed text-sm max-w-lg text-black text-opacity-80">
+            <p className="mx-auto   text-center lg:text-left capitalize leading-relaxed text-sm max-w-lg text-black text-opacity-80">
               {description}
             </p>
+              <div class=' mx-auto max-w-lg text-center lg:text-left'>
+                  <a className="w-full text-regal-blue text-sm" href="https://agri.nuterralabs.com">
+                    Looking for our agricultural solutions? Please click here
+                  </a>
+                  <span className="block w-16  py-1/8 mt-2 bg-regal-blue "></span>
+                </div>
+
           </div>
           <div className="max-w-2xl w-full">
             <Slider {...settings}>

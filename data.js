@@ -51,7 +51,7 @@ export const Process = {
       title: "Keep in touch",
       description:
         "We'll be here, one phone call or text away in case you need to edit or upgrade your website. We also offer optional yearly website maintenance and improved service.",
-      img: "/assest/proccess/launch.jpg", // 443 x 344
+      img: "/assest/proccess/keep.jpg", // 443 x 344
     },
   ],
 };

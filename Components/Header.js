@@ -25,7 +25,7 @@ const Header = () => {
             <button  onClick={()=>{setOpenMbielMenu(true)}} className="block md:hidden text-white hover:text-grean-950">
               <MenuIcon className='w-8 h-8' />
             </button>
-            <button className="hidden lg:block text-sm text-white px-5 py-2 rounded border  hover:bg-regal-blue">My request</button>
+           
           </div>
         </div>
       </div>

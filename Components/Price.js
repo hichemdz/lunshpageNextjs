@@ -13,7 +13,7 @@ const Item = ({ Icon, name }) => {
 };
 const Price = () => {
   return (
-    <Section myRef={6} className="bg-main-balck text-white fill-grean-950  py-32 ">
+    <Section myRef={5} className="bg-white  text-black fill-grean-950  py-32 ">
       <div className="flex space-y-8 lg:space-y-0 flex-col lg:flex-row lg:items-center justify-between ">
         <div className="max-w-xl space-y-6">
           <h3 className="text-2xl capitalize">Our pricing plan</h3>

@@ -20,7 +20,6 @@ const InnerContext = ({ children, val }) => {
     "Our Process",
     "projects",
     "contact",
-    "testimonial",
     "pricing",
   ];
   const dataService = [
@@ -37,7 +36,7 @@ const InnerContext = ({ children, val }) => {
     },
     { title: "Our location", label: "Edmonton, Montreal", icon: AddressIcon },
     { title: "Ofition timing", label: "24hrs 7 days a week", icon: TimeIcon },
-    { title: "Call Us for help!", label: "587-984-2923", icon: PhoneIcon },
+    { title: "Call Us for help!", label: "+1 (587) 715-0179", icon: PhoneIcon },
   ];
   const oferData = [
     "Websites",

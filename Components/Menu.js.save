@@ -8,7 +8,6 @@ const NavItem = ({ name, index, footer }) => {
     useContext(ContextData);
   const handleLink = (e) => {
     e.preventDefault();
-    
     if (activeItme !== index && dataRef[index]) {
       let top = dataRef[index].current.offsetTop - 60;
       window.scroll({
@@ -44,11 +43,15 @@ export const MneuMobiel = () => {
           {items.map((val, key) => {
             return <NavItem name={val} key={key} index={key} />;
           })}
-          <li className='capitalize hover:text-grean-950 text-white' >
-      		<a   href='http://agri.nuterralabs.com'>
-        	  agriculture
-      		</a>
-    	  </li>
+
+  
+          <li
+      className={`capitalize hover:text-grean-
+    >
+      <a   href={`#${removeSpace(name)}`} onClick={handleLink}>
+        {name}
+      </a>
+    </li>
         </ul>
       
     </div>
@@ -66,12 +69,6 @@ const Menu = ({ className, footer = false }) => {
       {items.map((val, key) => {
         return <NavItem name={val} key={key} index={key} footer={footer} />;
       })}
-      <li className='capitalize hover:text-grean-950 text-white' >
-                <a   href='http://agri.nuterralabs.com/'>
-                  agriculture
-                </a>
-          </li>
-
     </ul>
   );
 };

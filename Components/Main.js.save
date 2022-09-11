@@ -1,7 +1,4 @@
-import React, { useContext } from "react";
-
-import { ContextData } from "../Context";
-
+import React from "react";
 
 import { Section } from ".";
 const InputMainContact = ({ label, placeholder, type = "text", textarea }) => (
@@ -50,23 +47,7 @@ const MainContact = ({ title }) => {
 };
 
 const Main = () => {
- 
-  const { activeItme, setOpenMbielMenu, removeSpace, dataRef } =
-    useContext(ContextData);
-  
-  const handleLink = (e) => {
-    e.preventDefault();
-    let index = 4;
-    if (activeItme !== index && dataRef[index]) {
-      let top = dataRef[index].current.offsetTop - 60;
-      window.scroll({
-        top: top <0?0:top   ,
-        behavior: "smooth",
-      });
-      setOpenMbielMenu(false)
-    }
-  };
-
+   const handelLink = (
   const styleCircle = () => ({
     position: "absolute",
     width: "103.58px",
@@ -98,7 +79,7 @@ const Main = () => {
                   come to life.{" "}
                 </p>
                 <div>
-                  <a className="text-regal-blue" href="#" onClick={handleLink} >
+                  <a className="text-regal-blue" href="#">
                     Contact us Now
                   </a>
                   <span className="block w-16  py-1/8 mt-2 bg-regal-blue "></span>
@@ -112,7 +93,7 @@ const Main = () => {
                "
               />
               <div className="absolute rounded-full bg-blue-900 p-40 bg-opacity-50 -right-10 top-16" />
-              <MainContact title="Our team is at your service!" />
+              <MainContact title="Our team is at your service !" />
             </div>
           </div>
         </div>

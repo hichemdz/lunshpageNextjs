@@ -35,7 +35,7 @@ const Description = ({ text, mediaData }) => {
         ))}
       </li>
       <li>
-        <p className="-mt-4 text-md leading-relaxed  lg:max-w-3xl pr-3">{text}</p>
+        <p className="-mt-4 text-md leading-relaxed  lg:max-w-sm pr-3">{text}</p>
       </li>
     </ul>
   );
@@ -111,7 +111,8 @@ const Footer = () => {
       link: "#",
     },
   ];
-  const desc = "Nu Terra Labs is a Canadian based agri-tech and software development business. We aim to bridge any gaps you may have and work to build partnerships. Our team brings experience in Websites, Graphic Design, Applications, Content Writing, Ecommerce / Drop shipping, SEO, Marketing and many other business related activities.";
+
+const desc = "Nu Terra Labs is a Canadian based agri-tech and software development business. We aim to bridge any gaps you may have and work to build partnerships. Our team brings experience in Websites, Graphic Design, Applications, Content Writing, Ecommerce / Drop shipping, SEO, Marketing and many other business related activities.";
   return (
     <Section
       EdnComponent={EndFooter}
@@ -119,13 +120,17 @@ const Footer = () => {
       className="bg-gray-900"
     >
       <div className=" grid grid-cols-12 lg:grid-cols-12 items-start gap-7 py-8">
-        <div className="col-span-12 md:col-span-8  text-white">
+        <div className="col-span-12 md:col-span-8 lg:col-span-4 text-white">
           <Description
-            text={desc}
+            text="Ordered my first mobile app development to ITSoft Solutions. I was
+            inexperienced contractor ."
             mediaData={data}
           />
         </div>
-        
+        <div className="col-span-12  sm:col-span-6 md:col-span-4  lg:col-span-3 space-y-5">
+          <h6 className="text-white font-semibold capitalize">Offices</h6>
+          <MenuOfferFooter data={oferData} />
+        </div>
         <div className="col-span-6  md:col-span-4 lg:col-span-2 space-y-5">
           <h6 className="text-white font-semibold capitalize">Menu</h6>
           <Menu className="space-y-2" footer={true} />
