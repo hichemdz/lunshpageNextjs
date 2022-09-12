@@ -14,7 +14,8 @@ import {
 export const ContextData = createContext();
 
 const InnerContext = ({ children, val }) => {
-
+  
+  const URL_API = 'http://localhost:8001/send';
   const slide = createRef(null); // change slide service
   const [slideIndex, setslideIndex] = useState(0); // change header slide service
   const items = [
@@ -101,6 +102,7 @@ const InnerContext = ({ children, val }) => {
     removeSpace,
     slide,
     slideIndex, setslideIndex,
+    URL_API,
     ...val,
   };
   return (

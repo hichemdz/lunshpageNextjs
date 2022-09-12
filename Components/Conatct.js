@@ -1,6 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import axios from 'axios';
 import { ContextData } from "../Context";
 import Section from "./Section";
+import Swal from 'sweetalert2'
+
 
 const ItemContact = ({ title, label, Icon }) => {
   return (
@@ -16,7 +19,40 @@ const ItemContact = ({ title, label, Icon }) => {
   );
 };
 const Conatct = () => {
-  const { dataContact,oferData } = useContext(ContextData);
+  const { dataContact,oferData,URL_API } = useContext(ContextData);
+  const [contact ,setConatc] = useState({email:"",subject:"client contact",message:"",type:'',name:""})
+  
+  const hadnleInput = (e) => {
+    const {name,value} = e.target
+    setConatc({...contact,[name]:value});
+  }
+
+  const hadelSubmit = (e) => {
+    e.preventDefault()
+
+    const url = URL_API;
+
+    axios.post(url,contact)
+
+    .then(function (response) {
+      Swal.fire({
+        title: response.data.status?'success': 'Error!',
+        text: response.data.message,
+        icon: response.data.status?'success': 'error',
+      })
+
+     setConatc({email:"",subject:"client contact",message:"",type:'',name:""})
+
+    })
+    .catch(function (error) {
+      Swal.fire({
+        title:  'Error!',
+        text: response.data.message || '!',
+        icon:  'error',
+      })
+    });
+  }
+  
   return (
     <Section
       myRef={4}
@@ -33,6 +69,9 @@ const Conatct = () => {
               <div className="col-span-2 md:col-span-1">
                 <input
                   className="w-full  md:col-span-1 rounded px-3 py-2"
+                  name='name'
+                  value={contact.name}
+                  onChange={hadnleInput}
                   placeholder="my name is .."
                 />
               </div>
@@ -40,12 +79,15 @@ const Conatct = () => {
                 <input
                   type='email'
                   className="w-full rounded px-3 py-2"
+                  name='email'
+                  value={contact.email}
+                  onChange={hadnleInput}
                   placeholder="my email is .."
                 />
               </div>
               <div className="col-span-2 ">
-                <select className="w-full rounded px-3 py-2">
-                      <option value='0'>choose your service</option>
+                <select name='type' onChange={hadnleInput} className="w-full rounded px-3 py-2">
+                      <option value='0' selected={contact.type===''}>choose your service</option>
                       {
                         oferData.map(op=><option key={op} value={op}>{op}</option>)
                       }
@@ -55,11 +97,14 @@ const Conatct = () => {
                 <textarea
                   className="w-full rounded px-3 py-2"
                   rows={4}
+                  value={contact.message}
+                  name='message'
+                  onChange={hadnleInput}
                   placeholder="my message is .."
                 />
               </div>
               <div>
-                <button className="rounded text-sm px-4 py-2 bg-grean-950 text-white">
+                <button onClick={hadelSubmit} className="rounded text-sm px-4 py-2 bg-grean-950 text-white">
                   send
                 </button>
               </div>
